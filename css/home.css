@@ -1,0 +1,268 @@
+
+.ministry-card {
+    display: flex;
+    background: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #008080;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    margin-bottom: 20px; /* Adjust margin bottom as needed */
+    flex: 0 0 calc(33.33% - 20px); /* Three cards per row by default */
+}
+
+.ministry-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-box {
+    font-size: 40px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.ministry-content h4 {
+    margin-bottom: 5px;
+}
+
+.ministry-content p {
+    margin: 0;
+}
+
+.ministry-content small {
+    display: block;
+    margin-top: 10px;
+    font-size: 90%;
+}
+
+@media (max-width: 991px) {
+    .ministry-card {
+        flex: 0 0 calc(50% - 20px); /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .ministry-card {
+        flex: 0 0 calc(100% - 20px); /* One card per row on smaller screens */
+    }
+}
+
+/* About Section */
+.about-section {
+    background-color: #f8f9fa; /* Light background for a fresh look */
+}
+
+.image-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.image-hover .img-fluid {
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.image-hover .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.image-hover:hover .img-fluid {
+    filter: brightness(50%);
+}
+
+.image-hover:hover .middle {
+    opacity: 1;
+}
+
+.image-hover .text {
+    background-color: #0051ff; /* Bootstrap blue for consistency */
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+.about-text .section-heading {
+    color: #d54e0f; /* Blue color for heading to attract attention */
+    font-size: 22px;
+    padding-right: 5px;
+}
+
+.btn-custom {
+    background-color: #008080; /* Teal for the button to stand out */
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #005f5f; /* Darker teal on hover for effect */
+}
+
+/* Visit Us Section */
+.visit-us {
+    background-color: #f3f4f6;
+    position: relative;
+    color: #fff;
+    padding: 5rem 0;
+}
+
+.visit-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1B3A57;
+    z-index: 1;
+}
+
+.visit-us .container {
+    position: relative;
+    z-index: 2;
+}
+
+.visit-us h1,
+.visit-us p,
+.visit-us ul {
+    color: #fff;
+}
+
+.visit-us .fa {
+    color: #ff6347;
+}
+
+/* Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Title */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border-radius: 0.25rem;
+}
+
+/* Testimonial Carousel */
+.testimonial-carousel .testimonial-item {
+    margin: 0 15px;
+}
+
+.testimonial-item .bg-primary,
+.testimonial-item .bg-secondary,
+.testimonial-item .bg-success,
+.testimonial-item .bg-danger {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+    border-radius: 0.25rem;
+}
+
+.testimonial-item h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-item p {
+    margin: 0;
+}
+
+/* Upcoming Events Section */
+.upcoming-events {
+    background-color: #fafafa;
+}
+
+.event-card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.event-date {
+    background-color: #ff6347;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100px;
+    text-align: center;
+}
+
+.event-date .day {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.event-date .month-year {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-date .month {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.event-date .year {
+    font-size: 1rem;
+}
+
+.event-info {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.event-info h3 {
+    color: #1b3a57;
+    margin-bottom: 1rem;
+}
+
+.event-info p {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .event-card {
+        flex-direction: column;
+    }
+
+    .event-date {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+}
+
+/* General Image Styling */
+.img-fluid {
+    border-radius: 0.5rem;
+}

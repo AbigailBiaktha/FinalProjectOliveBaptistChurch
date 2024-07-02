@@ -1,0 +1,69 @@
+header {
+    background-color: #0f6674;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+header h1 {
+    color:white;
+    margin: 0;
+    font-size: 2.5em;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+nav a:hover {
+    background-color: #e6b800;
+}
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    flex-grow: 1;
+}
+.section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.section h2 {
+    margin-top: 0;
+    color: #0f6674;
+    font-size: 2em;
+}
+.section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+.activity, .testimonial {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #e0f7fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.activity h3, .testimonial h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #0f6674;
+}
+.activity p, .testimonial p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0f6674;
+    color: white;
+    flex-shrink: 0;
+}

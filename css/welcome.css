@@ -1,0 +1,18 @@
+.welcome-message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px;
+    background: linear-gradient(to right, #e0f7fa, #ffffff); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    font-family: 'Arial', sans-serif; 
+}
+
+.welcome-message h2 {
+    font-size: 2.5em; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+}
+
+.welcome-message p {
+    font-size: 1.2em; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+}

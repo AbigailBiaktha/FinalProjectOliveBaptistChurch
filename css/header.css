@@ -1,0 +1,62 @@
+    /* Reset styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Navbar styles */
+    .navbar {
+        background-color: #0f6674; /* Adjust as per your color preference */
+        color: #fff;
+        padding: 1rem 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    
+    
+    .logo {
+        color: #fff;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+    
+    .nav-links {
+        list-style-type: none;
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin-right: 20px;
+    }
+    
+    .nav-links li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+    }
+    
+    .nav-links li a:hover {
+        color: #ffd700; /* Change to your preferred hover color */
+    }
+    
+    /* Album and Login button styles */
+    .nav-links li:last-child {
+        margin-left: auto; /* Pushes Album and Login buttons to the right */
+    }
+    
+    .nav-links li:last-child a {
+        background-color: #ffd700; /* Button background color */
+        color: #0f6674; /* Button text color */
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .nav-links li:last-child a:hover {
+        background-color: #0f6674; /* Hover background color */
+        color: #fff; /* Hover text color */
+    }
+    

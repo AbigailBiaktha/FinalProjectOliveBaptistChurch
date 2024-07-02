@@ -1,0 +1,44 @@
+/* Footer Styling */
+.footer-container {
+    background-color: #0f6674;
+    padding: 40px 20px;
+    color: white;
+}
+
+.footer-container .navbar-brand {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.footer-container .footer-contact, .footer-container .footer-findus {
+    margin-bottom: 20px;
+}
+
+.footer-container .footer-contact h4, .footer-container .footer-findus h4 {
+    margin-bottom: 15px;
+}
+
+.footer-container .footer-social {
+    margin-top: 20px;
+}
+
+.footer-container .footer-social a {
+    color: #0f6674;
+    background-color: white;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container .footer-bottom {
+    border-top: 1px solid rgba(23, 162, 184, 0.2);
+    padding-top: 20px;
+    text-align: center;
+    margin-top: 20px;
+}

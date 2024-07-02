@@ -1,0 +1,198 @@
+/* about.css */
+
+/* General Styles */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #88aacd;
+  margin: 0;
+  padding: 0;
+}
+
+/* Adjust the image container to ensure proper alignment */
+.image-hover {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.image-hover img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.middle {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.image-hover:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+
+/* Team Section */
+/* Team Section */
+.team {
+  padding: 4rem 0;
+  background-color:#1B3A57;
+}
+
+.team h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #0f6674;
+}
+
+.card {
+  border: none;
+  background-color: #ffffff; /* Change card background to white */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  height: 100%; /* Ensure cards have the same height */
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.card-body {
+  flex: 1; /* Ensure card body takes remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  color: #333; /* Adjust text color for better contrast */
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666; /* Adjust text color for better contrast */
+}
+
+.btn-primary {
+  background-color: #0f6674;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0d5a68;
+}
+
+
+
+
+/* History Section */
+.history {
+  padding: 4rem 0;
+  background-color: #f1f1f1;
+}
+
+.history h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #0f6674;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #ddd;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  padding: 2rem 0;
+  width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: #0f6674;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-panel {
+  position: relative;
+  width: calc(100% - 30px);
+  padding: 1rem 2rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.timeline-body p {
+  margin-bottom: 0;
+  color: #666;
+}
+
+/* Clearfix */
+.timeline-item::after, .timeline-item::before {
+  content: "";
+  display: table;
+  clear: both;
+}
