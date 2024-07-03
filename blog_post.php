@@ -68,7 +68,11 @@
                         <?php echo date("F j, Y", strtotime($row['created_at'])); ?> by <strong><?php echo htmlspecialchars($row['author']); ?></strong>
                     </p>
                     <div class="content">
-                        <p class="lead"><?php echo nl2br(htmlspecialchars_decode($row['content'])); ?></p>
+                        <?php
+                            // Replace \r\n with newlines and decode HTML entities
+                            $content = nl2br(str_replace("\\r\\n", "\r\n", htmlspecialchars_decode($row['content'])));
+                        ?>
+                        <p class="lead"><?php echo $content; ?></p>
                     </div>
                 </div>
 
@@ -114,6 +118,8 @@
         </div>
     </div>
 </div>
+
+
 <!-- Blog Post End -->
 
 

@@ -20,11 +20,7 @@
   <?php require_once 'layout/header.php'; ?>
 
 
-  <div class="welcome-message">
-       <h1 id="welcome-header"></h1>
-       <p id="welcome-subheader"></p>
 
-</div>
 
   <!-- Ministries Section Start -->
   <div class="container-fluid pt-5">

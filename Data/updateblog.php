@@ -28,7 +28,9 @@ include("logic/blog/getblog.php");
                 </tr>
                 <tr>
                     <td><label for="content">Content</label></td>
-                    <td><textarea name="content" id="content" cols="30" rows="10"><?php echo htmlspecialchars($row['content']); ?></textarea></td>
+                    <td>
+                        <textarea name="content" id="content" cols="30" rows="10"><?php echo htmlspecialchars_decode(str_replace("\\r\\n", "\r\n", $row['content'])); ?></textarea>
+                    </td>
                 </tr>
                 <tr>
                     <td><label for="author">Author</label></td>

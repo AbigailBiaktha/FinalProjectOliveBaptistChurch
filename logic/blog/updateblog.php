@@ -14,8 +14,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['updateBtn'])) {
     $content = $conn->real_escape_string($_POST['content']);
     $author = $conn->real_escape_string($_POST['author']);
 
+    // Fetch existing image path
+    $sql = "SELECT image FROM blogs WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    if ($stmt) {
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $stmt->bind_result($existingImage);
+        $stmt->fetch();
+        $stmt->close();
+    }
+
     // Initialize image variable with existing image URL
-    $image = $row['image'];
+    $image = $existingImage;
 
     // Handle file upload if a new photo is uploaded
     if (!empty($_FILES["image"]["name"])) {
@@ -83,4 +94,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['updateBtn'])) {
 // Fetch blog data after potential update to display in the form
 include("logic/blog/getblog.php");
 ?>
-
