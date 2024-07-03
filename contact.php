@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <?php require_once 'layout/header.php'; ?>
-    <?php require_once 'layout/navbar.php'; ?>
+  
 
     
     <!-- Contact Start -->
