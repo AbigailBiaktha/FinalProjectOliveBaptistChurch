@@ -50,16 +50,16 @@
                         ?>
                         <div class="col-lg-4 mb-4">
                             <div class="card border-0 shadow-sm mb-2">
-                                <img class="card-img-top mb-2" src="<?php echo $image_url; ?>" alt="Blog Image" />
+                                <img class="card-img-top mb-2" src="<?php echo htmlspecialchars($image_url); ?>" alt="Blog Image" />
                                 <div class="card-body bg-light text-center p-4">
-                                    <h4><?php echo mb_strimwidth($row['title'], 0, 50, "..."); ?></h4>
+                                    <h4><?php echo mb_strimwidth(htmlspecialchars($row['title']), 0, 50, "..."); ?></h4>
                                     <div class="d-flex justify-content-center mb-3">
                                         <small class="mr-3">
                                             <i class="fa fa-user text-primary"></i> <?php echo htmlspecialchars($row['author']); ?>
                                         </small>
                                     </div>
-                                    <p><?php echo mb_strimwidth($row['content'], 0, 110, "..."); ?></p>
-                                    <a href="blog_post.php?id=<?php echo $row['id']; ?>" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
+                                    <p><?php echo mb_strimwidth(htmlspecialchars_decode(str_replace("\\r\\n", "\r\n", $row['content'])), 0, 110, "..."); ?></p>
+                                    <a href="blog_post.php?id=<?php echo htmlspecialchars($row['id']); ?>" class="btn btn-primary px-4 mx-auto my-2">Read More</a>
                                 </div>
                             </div>
                         </div>
